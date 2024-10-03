@@ -1,0 +1,84 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+main {
+    width: 100vw;
+    height: 100vh;
+    overflow-x: hidden;
+}
+
+/* chees board css start*/
+.board-panel {
+    width: 480px;
+    height: 480px;
+    display: grid;
+    grid-template-columns: repeat(8, minmax(0, 1fr));
+    grid-template-rows: repeat(8, minmax(0, 1fr));
+    background-color: #e6ccab;
+
+}
+
+.chessboard {
+    display: grid;
+    grid-template-columns: repeat(8, minmax(0, 1fr));
+    grid-template-rows: repeat(8, minmax(0, 1fr));
+    width: 450px;
+    height: 450px;
+    transform: rotate(0deg);
+    border: 1.5px solid;
+    /* display: none; */
+}
+
+.piece.white {
+    color: white;
+    /* filter: invert(); */
+    border-image: fill;
+}
+
+.piece.black {
+    /* color: black; */
+}
+
+.flipped {
+    transform: rotate(180deg);
+}
+
+.square {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.square.light {
+    background-color: #e6ccab;
+}
+
+.square.dark {
+    background-color: #b46724;
+}
+
+.piece {
+    font-size: 40px;
+    /* scale: 3; */
+    cursor: grab;
+}
+
+.piece.draggable {
+    background: transparent;
+    cursor: grab;
+    scale: 3;
+}
+
+.dragging {
+    opacity: 0.5;
+}
+
+.flipped .piece {
+    transform: rotate(180deg);
+}
+
+/* chess board css end */
+

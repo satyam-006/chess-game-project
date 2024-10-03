@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/x-icon" href="/images/chessicon.jpg">
+    <link rel="stylesheet" href="/css/tailwind.css">
+    <title>
+        <%=title%>
+    </title>
+</head>
+
+<body>
+    <main class="w-full h-screen bg-[#101213]">
+        <header class="header w-full">
+            <nav class="w-full text-white flex align-center justify-between px-16 py-4">
+                <div class="logo font-medium text-4xl">SPG Chess</div>
+                <ul class="flex align-center justify-center gap-10 font-medium text-gray-400">
+                    <li class="hover:text-gray-300 cursor-pointer">About</li>
+                    <li class="hover:text-gray-300 cursor-pointer">Update</li>
+                    <li class="hover:text-gray-300 cursor-pointer">Rules</li>
+                </ul>
+                <div>
+                    <button class="bg-lime-600 px-8 py-2 font-bold border-1 rounded-md hover:bg-lime-500 mr-2">Login
+                    </button>
+                    <button class="bg-zinc-700 px-8 py-2 font-bold border-1 rounded-md hover:bg-zinc-600">Sign Up
+                    </button>
+                </div>
+            </nav>
+        </header>
+        <div class="hero flex items-center justify-between px-16">
+            <div>
+                <img src="/images/chess.jpg" alt="" width="500" height="500" class="mt-4 rounded-md">
+            </div>
+            <div class="w-[500px] h-[500px] mr-[120px] mt-4 flex items-center justify-center flex-col gap-8">
+                <h1 class="text-white text-[42px] w-96 font-bold text-center">Master Your Game Play Chess Online</h1>
+                <a href="/chess"><button
+                        class="text-white w-96 h-20 bg-lime-600 text-4xl font-medium rounded-xl hover:bg-lime-500">
+                        Play Online
+                    </button>
+                </a>
+                <button class="text-white text-4xl font-medium rounded-xl w-96 h-20 bg-zinc-700 hover:bg-zinc-600">
+                    Play with Friends
+                </button>
+            </div>
+        </div>
+    </main>
+</body>
+
+</html>

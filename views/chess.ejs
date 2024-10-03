@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/x-icon" href="/images/chessicon.jpg">
+    <link rel="stylesheet" href="/css/style.css">
+    <link rel="stylesheet" href="/css/tailwind.css">
+    <title>
+        <%=title%>
+    </title>
+    <style>
+        .chessboard-container {
+            display: flex;
+            justify-content: center;
+            align-items: flex-start;
+            color: white;
+        }
+
+        .captured-pieces {
+            width: 100px;
+            padding: 10px;
+            text-align: center;
+        }
+
+        .captured-pieces h3 {
+            margin-bottom: 10px;
+            font-size: 14px;
+        }
+
+        .captured-pieces div {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            align-items: center;
+        }
+        .player-first{
+            background-image: url('https://i.pinimg.com/474x/93/e8/0b/93e80b081869b2a59fed971491e14d6a.jpg');
+            background-position: top;
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+    </style>
+</head>
+
+<body>
+    <main class="w-full h-screen bg-[#101213]">
+        <header class="header w-full">
+            <nav class="w-full text-white flex align-center justify-between px-16 py-4">
+                <div class="logo font-medium text-2xl">SPG Chess</div>
+                <ul class="flex align-center justify-center gap-10 font-medium text-gray-400">
+                    <li class="hover:text-gray-300 cursor-pointer">About</li>
+                    <li class="hover:text-gray-300 cursor-pointer">Update</li>
+                    <li class="hover:text-gray-300 cursor-pointer">Rules</li>
+                </ul>
+                <div>
+                    <button class="bg-lime-600 px-8 py-2 font-bold border-1 rounded-md hover:bg-lime-500 mr-2">Login
+                    </button>
+                    <button class="bg-zinc-700 px-8 py-2 font-bold border-1 rounded-md hover:bg-zinc-600 hidden">Sign Up
+                    </button>
+                </div>
+            </nav>
+        </header>
+        <div class="w-full flex items-center justify-center mt-4">
+            <div class="board-panel flex items-center justify-center mx-6 relative rounded-md">
+                <div class="w-4 h-full absolute left-0 top-0 grid grid-rows-8 text-center pt-8">
+                    <span>8</span>
+                    <span>7</span>
+                    <span>6</span>
+                    <span>5</span>
+                    <span>4</span>
+                    <span>3</span>
+                    <span>2</span>
+                    <span>1</span>
+                </div>
+                <div class="w-full h-[20px] absolute bottom-0 left-0 grid grid-cols-8 text-center">
+                    <span>A</span>
+                    <span>B</span>
+                    <span>C</span>
+                    <span>D</span>
+                    <span>E</span>
+                    <span>F</span>
+                    <span>G</span>
+                    <span>H</span>
+                </div>
+                <div class="chessboard"></div>
+            </div>
+        </div>
+    </main>
+
+
+    <script src="https://cdn.socket.io/4.7.5/socket.io.min.js"
+        integrity="sha384-2huaZvOR9iDzHqslqwpR87isEmrfxqyWOF7hr7BY6KG0+hVKLoEXMPUJw3ynWuhO"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/chess.js/0.10.3/chess.min.js"
+        integrity="sha512-xRllwz2gdZciIB+AkEbeq+gVhX8VB8XsfqeFbUh+SzHlN96dEduwtTuVuc2u9EROlmW9+yhRlxjif66ORpsgVA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+
+    <script src="/javascripts/chessgame.js"></script>
+    <script src="/javascripts/index.js"></script>
+</body>
+
+</html>
